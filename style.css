@@ -1,0 +1,486 @@
+:root {
+    --bg-color: #1a1a2e; /* Fondo principal, un púrpura oscuro */
+    --card-bg: #22223b; /* Fondo de tarjetas, un poco más claro */
+    --text-color: #e0e0e0; /* Color de texto principal */
+    --heading-color: #ffffff; /* Color de títulos */
+    --primary-color: #007bff; /* Color de acento para botones, etc. */
+    --accent-color: #4a4e69; /* Color de acento secundario */
+    --link-hover: #b8c4d6; /* Color de hover para enlaces */
+    --border-color: #333; /* Color de bordes */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* -------------------------------------------------- */
+/* Layout y Utilidades */
+/* -------------------------------------------------- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* -------------------------------------------------- */
+/* Encabezado y Navegación */
+/* -------------------------------------------------- */
+
+.header {
+    background: var(--card-bg);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+}
+
+/* -------------------------------------------------- */
+/* Sección de Héroe */
+/* -------------------------------------------------- */
+
+.hero-section {
+    background: linear-gradient(135deg, var(--bg-color), var(--accent-color));
+    padding: 8rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+}
+
+.hero-name {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-image {
+    width: 250px;
+    height: 250px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-image: url(cris.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* -------------------------------------------------- */
+/* Sección de Proyectos */
+/* -------------------------------------------------- */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.project-image-placeholder {
+    width: 100%;
+    height: 200px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-image-placeholder1 {
+    width: 100%;
+    height: 200px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-image: url('dulcesfestejos.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-image-placeholder1 {
+    width: 100%;
+    height: 200px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-image: url('dulcesfestejos.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-image-placeholder2 {
+    width: 100%;
+    height: 200px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-image: url('rompeolas.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-image-placeholder3 {
+    width: 100%;
+    height: 200px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-image: url('avaims.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-image-placeholder4 {
+    width: 100%;
+    height: 200px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-image: url('dyo.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.project-image-placeholder5 {
+    width: 100%;
+    height: 200px;
+    background: var(--accent-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-image: url('makio.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.project-card h3 {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--link-hover);
+    margin-bottom: 1.5rem;
+}
+
+.btn-project, .btn-repo {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-project {
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    margin-right: 1rem;
+    margin-bottom: 10px;
+}
+
+.btn-repo {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-project:hover, .btn-repo:hover {
+    transform: translateY(-2px);
+}
+
+.btn-repo:hover {
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+}
+
+/* -------------------------------------------------- */
+/* Sección de Habilidades */
+/* -------------------------------------------------- */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.skill-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.skill-card h4 {
+    color: var(--heading-color);
+    font-size: 1.1rem;
+}
+
+/* -------------------------------------------------- */
+/* Sección Sobre Mí */
+/* -------------------------------------------------- */
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.btn-download-cv {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download-cv:hover {
+    background-color: #0056b3;
+}
+
+/* -------------------------------------------------- */
+/* Sección de Contacto */
+/* -------------------------------------------------- */
+
+.contact-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* -------------------------------------------------- */
+/* Pie de Página */
+/* -------------------------------------------------- */
+
+.footer {
+    background: var(--card-bg);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: auto;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------------------------- */
+/* Responsive Design */
+/* -------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav a {
+        margin: 0 0.5rem;
+    }
+    
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.imgindv {
+    background-image: url('dulcesfestejos.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.ttt {
+    /* Define el tamaño del contenedor para la imagen */
+    width: 60px;  /* Ajusta el ancho según tu imagen */
+    /* Propiedades para la imagen de fondo */   
+    background-size: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+}
